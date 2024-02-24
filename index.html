@@ -32,8 +32,12 @@ body,td,th {
 </style>
 <script type="text/JavaScript">
 <!--
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
 }
 
 function MM_preloadImages() { //v3.0
@@ -42,12 +46,8 @@ function MM_preloadImages() { //v3.0
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
 
 function MM_swapImage() { //v3.0
@@ -61,8 +61,10 @@ function MM_swapImage() { //v3.0
 
 
 
-<body onload="MM_preloadImages('LOGO2.png','gecko4.png','gecko2.png','token02.png','666B.png','666D.png','666H.png','666J.png','666L.png','666Z2.png','666X2.png','666Y2.png','111B.png','222B.png','333A.png','R4.png','R6.png','00B.png','00D.png','01B.png','01F.png','demon02.png','demon06.png')">
+<body onload="MM_preloadImages('LOGO2.png','gecko4.png','gecko2.png','token02.png','666B.png','666D.png','666H.png','666J.png','666L.png','666Z2.png','666X2.png','666Y2.png','111B.png','222B.png','333A.png','R4.png','R6.png','00B.png','00D.png','01B.png','01F.png','demon02.png','demon06.png','demon04.png')">
 <p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('logogecko','','LOGO2.png',1)"><img src="modulo01gecko.png" width="900" height="300" /></a><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('GeckoLogo','','LOGO2.png',1)"></a><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Gecko','','LOGO2.png',1)"></a><br />
+  <br />
+  <br />
   <br />
   <br />
 </p>
@@ -81,12 +83,15 @@ function MM_swapImage() { //v3.0
 <br />
 <table width="200" border="0" align="center">
   <tr>
-    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image28','','demon02.png',1)" onmouseout="MM_swapImgRestore()"><img src="demon01.png" name="Image28" width="299" height="111" border="0" id="Image28" /></a><a href="AAA.png" target="_blank"></a></td>
-    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image29','','demon04.png',0)" onmouseout="MM_swapImgRestore()"><img src="demon03.png" name="Image29" width="299" height="111" border="0" id="Image29" /></a><a href="AAA.png" target="_blank"></a></td>
-    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image27','','demon06.png',1)" onmouseout="MM_swapImgRestore()"><img src="demon05.png" name="Image27" width="299" height="111" border="0" id="Image27" /></a><a href="AAA.png" target="_blank"></a></td>
+    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image28','','demon02.png',1)" onmouseout="MM_swapImgRestore()"><img src="demon01.png" name="Image28" width="299" height="444" border="0" id="Image28" /></a><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image28','','demon02.png',1)" onmouseout="MM_swapImgRestore()"></a><a href="AAA.png" target="_blank"></a></td>
+    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image29','','demon04.png',1)" onmouseout="MM_swapImgRestore()"><img src="demon03.png" name="Image29" width="299" height="444" border="0" id="Image29" /></a><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image29','','demon04.png',0)" onmouseout="MM_swapImgRestore()"></a><a href="AAA.png" target="_blank"></a></td>
+    <td><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image27','','demon06.png',1)" onmouseout="MM_swapImgRestore()"><img src="demon05.png" name="Image27" width="299" height="444" border="0" id="Image27" /></a><a href="AAA.png" target="_blank" onmouseover="MM_swapImage('Image27','','demon06.png',1)" onmouseout="MM_swapImgRestore()"></a><a href="AAA.png" target="_blank"></a></td>
   </tr>
 </table>
-<p>&nbsp;</p>
+<p align="center"><br />
+    <img src="TITLE03.png" width="900" height="77" /><br />
+  <br />
+</p>
 <p><br />
   <br />
 </p>
